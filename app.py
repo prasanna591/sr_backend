@@ -36,4 +36,5 @@ def recommend_skills():
         return jsonify({"error": "sorry, no recommendation found ,try a different career goal"}), 404
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000, debug=False)
+
