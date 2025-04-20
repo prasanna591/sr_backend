@@ -4,7 +4,8 @@ import pandas as pd
 from difflib import get_close_matches
 
 app = Flask(__name__)
-CORS(app)
+
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 df =pd.read_csv("skill_recommendation_dataset.csv")
 
